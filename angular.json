@@ -3,5 +3,99 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "shared": {
+      "projectType": "library",
+      "root": "projects/shared",
+      "sourceRoot": "projects/shared/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/shared/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/shared/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/shared/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/shared/src/test.ts",
+            "tsConfig": "projects/shared/tsconfig.spec.json",
+            "karmaConfig": "projects/shared/karma.conf.js"
+          }
+        }
+      }
+    },
+    "sub-module1": {
+      "projectType": "library",
+      "root": "projects/sub-module1",
+      "sourceRoot": "projects/sub-module1/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/sub-module1/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sub-module1/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/sub-module1/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/sub-module1/src/test.ts",
+            "tsConfig": "projects/sub-module1/tsconfig.spec.json",
+            "karmaConfig": "projects/sub-module1/karma.conf.js"
+          }
+        }
+      }
+    },
+    "sub-module2": {
+      "projectType": "library",
+      "root": "projects/sub-module2",
+      "sourceRoot": "projects/sub-module2/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/sub-module2/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sub-module2/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/sub-module2/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/sub-module2/src/test.ts",
+            "tsConfig": "projects/sub-module2/tsconfig.spec.json",
+            "karmaConfig": "projects/sub-module2/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "shared"
 }
