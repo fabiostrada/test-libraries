@@ -3,7 +3,7 @@ import { SharedModule } from './shared.module';
 
 @Injectable({
   deps: [[new Optional(), new SkipSelf(), SharedService]],
-  providedIn: SharedModule,
+  providedIn: 'root',
   useFactory: (instance: SharedService | null) => instance || new SharedService(),
 })
 export class SharedService {
