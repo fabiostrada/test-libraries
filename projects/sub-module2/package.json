@@ -1,15 +1,15 @@
 {
   "name": "@test/sub-module2",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "peerDependencies": {
     "@angular/common": "^13.2.0",
     "@angular/core": "^13.2.0",
-    "@test/shared": "^0.0.1"
+    "@test/shared": "^0.0.2"
   },
   "dependencies": {
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@test/shared": "^0.0.1"
+    "@test/shared": "^0.0.2"
   }
 }

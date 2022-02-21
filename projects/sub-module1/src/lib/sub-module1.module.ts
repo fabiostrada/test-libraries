@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
-import { SubModule1Component } from './sub-module1.component';
+import {SubModule1Component } from './sub-module1.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '@test/shared';
+import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   {
@@ -16,7 +17,8 @@ const routes: Routes = [
   ],
   imports: [
     RouterModule.forChild(routes),
-    SharedModule
+    SharedModule,
+    CommonModule
   ],
   exports: [
     SubModule1Component

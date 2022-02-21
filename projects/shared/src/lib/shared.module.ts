@@ -14,7 +14,6 @@ import { SharedService } from './shared.service';
     SharedComponent
   ],
   providers: [
-    SharedService
   ]
 })
 export class SharedModule { }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { SubModule2Component } from './sub-module2.component';
 import { SharedModule } from '@test/shared';
 import { RouterModule, Routes } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
   ],
   imports: [
     RouterModule.forChild(routes),
-    SharedModule
+    SharedModule,
+    CommonModule
   ],
   exports: [
     SubModule2Component
