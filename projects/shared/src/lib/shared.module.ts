@@ -1,17 +1,13 @@
 import { NgModule } from '@angular/core';
-import { SharedComponent } from './shared.component';
-import { SharedService } from './shared.service';
-
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    SharedComponent
   ],
   imports: [
+    HttpClientModule
   ],
   exports: [
-    SharedComponent
   ],
   providers: [
   ]
