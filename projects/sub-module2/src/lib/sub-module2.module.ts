@@ -3,6 +3,7 @@ import { SubModule2Component } from './sub-module2.component';
 import { SharedModule } from '@test/shared';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   imports: [
     RouterModule.forChild(routes),
     SharedModule,
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [
     SubModule2Component
